@@ -51,6 +51,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             if (previewTitle) previewTitle.textContent = title;
             if (previewDesc) previewDesc.textContent = desc;
+
+            // Update Footer Style based on variant
+            const variant = item.getAttribute('data-variant');
+            const footer = parentMegamenu.querySelector('.megamenu-footer');
+            if (footer && variant) {
+                // Remove all possible footer classes
+                footer.classList.remove('footer-start', 'footer-grow', 'footer-profit', 'footer-partnership', 'footer-mixed');
+                footer.classList.add(`footer-${variant}`);
+            }
         });
     });
 });

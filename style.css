@@ -6,13 +6,15 @@
     --bg-page: #f8fafc;
     --border: #e2e8f0;
 
-    --start-accent: #f97316;
+    --start-accent: #3aabef;
     --grow-accent: #0ea5e9;
     --profit-accent: #22c55e;
 
-    --start-bg: #fff1eb;
+    --start-bg: #f0f9ff;
     --grow-bg: #f0f9ff;
     --profit-bg: #f0fdf4;
+    --partnership-accent: #facc15;
+    --partnership-bg: #fefce8;
 
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --shadow-megamenu: 0 20px 50px -12px rgba(0, 0, 0, 0.1);
@@ -83,7 +85,7 @@ body {
 }
 
 .logo-dots::before {
-    background: #f97316;
+    background: #3aabef;
     box-shadow: 6px 0 0 #0ea5e9;
 }
 
@@ -106,6 +108,25 @@ body {
     padding: 0.6rem 1.2rem;
     border-radius: 8px;
     transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.menu-item.has-megamenu .menu-link::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: rotate(45deg);
+    margin-bottom: 2px;
+    opacity: 0.6;
+    transition: transform 0.3s ease;
+}
+
+.menu-item.has-megamenu:hover .menu-link::after {
+    transform: rotate(45deg) translate(2px, 2px);
 }
 
 .menu-item:hover .menu-link {
@@ -164,6 +185,19 @@ body {
 .megamenu {
     display: none;
     padding-top: 2.5rem;
+    border-top: 3px solid transparent;
+}
+
+.megamenu#megamenu-services {
+    border-top-color: var(--grow-accent);
+}
+
+.megamenu#megamenu-solutions {
+    border-top-color: var(--grow-accent);
+}
+
+.megamenu#megamenu-company {
+    border-top-color: var(--start-accent);
 }
 
 .megamenu.active {
@@ -318,6 +352,49 @@ body {
     background: var(--start-bg);
 }
 
+.footer-grow {
+    background: var(--grow-bg);
+}
+
+.footer-grow a {
+    color: var(--grow-accent) !important;
+}
+
+.footer-profit {
+    background: var(--profit-bg);
+}
+
+.footer-profit a {
+    color: var(--profit-accent) !important;
+}
+
+.footer-partnership {
+    background: var(--partnership-bg);
+}
+
+.footer-partnership a {
+    color: var(--partnership-accent) !important;
+}
+
 .footer-start a {
     color: var(--start-accent) !important;
+}
+
+/* Social Icon Styles */
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.social-link {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 700;
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.social-link:hover {
+    color: var(--start-accent);
 }
