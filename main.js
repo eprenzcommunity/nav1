@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const footer = parentMegamenu.querySelector('.megamenu-footer');
             if (footer && variant) {
                 // Remove all possible footer classes
-                footer.classList.remove('footer-start', 'footer-grow', 'footer-profit', 'footer-partnership', 'footer-mixed');
+                footer.classList.remove('footer-start', 'footer-blue', 'footer-grow', 'footer-profit', 'footer-partnership', 'footer-mixed');
                 footer.classList.add(`footer-${variant}`);
             }
         });

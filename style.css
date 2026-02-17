@@ -6,11 +6,13 @@
     --bg-page: #f8fafc;
     --border: #e2e8f0;
 
-    --start-accent: #3aabef;
+    --start-accent: #ff5f0a;
     --grow-accent: #0ea5e9;
     --profit-accent: #25c105;
 
-    --start-bg: #f0f9ff;
+    --blue-accent: #3aabef;
+    --start-bg: #fff4ed;
+    --blue-bg: #f0f9ff;
     --grow-bg: #f0f9ff;
     --profit-bg: #f0fdf4;
     --partnership-accent: #facc15;
@@ -189,7 +191,7 @@ body {
 }
 
 .megamenu#megamenu-services {
-    border-top-color: var(--grow-accent);
+    border-top-color: var(--start-accent);
 }
 
 .megamenu#megamenu-solutions {
@@ -197,7 +199,7 @@ body {
 }
 
 .megamenu#megamenu-company {
-    border-top-color: var(--start-accent);
+    border-top-color: var(--blue-accent);
 }
 
 .megamenu.active {
@@ -244,6 +246,11 @@ body {
 .profit-col {
     border-color: var(--profit-accent);
     color: var(--profit-accent);
+}
+
+.blue-col {
+    border-color: var(--blue-accent);
+    color: var(--blue-accent);
 }
 
 /* Service Items */
@@ -376,8 +383,20 @@ body {
     color: var(--partnership-accent) !important;
 }
 
+.footer-start {
+    background: var(--start-bg);
+}
+
 .footer-start a {
     color: var(--start-accent) !important;
+}
+
+.footer-blue {
+    background: var(--blue-bg);
+}
+
+.footer-blue a {
+    color: var(--blue-accent) !important;
 }
 
 /* Social Icon Styles */
