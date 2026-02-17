@@ -4,61 +4,50 @@ document.addEventListener('DOMContentLoaded', () => {
     const megamenus = document.querySelectorAll('.megamenu');
     const header = document.querySelector('.site-header');
 
-    let activeMenu = null;
-
-    // Megamenu switch logic
+    // Handle Main Menu Hover
     menuItems.forEach(item => {
         item.addEventListener('mouseenter', () => {
             const menuType = item.getAttribute('data-menu');
-
-            // Show container
             megamenuContainer.classList.add('active');
 
-            // Hide all menus first, then show the current one
             megamenus.forEach(menu => menu.classList.remove('active'));
             const targetMenu = document.getElementById(`megamenu-${menuType}`);
-            if (targetMenu) {
-                targetMenu.classList.add('active');
-            }
-
-            activeMenu = menuType;
+            if (targetMenu) targetMenu.classList.add('active');
         });
     });
 
-    // Close on mouse leave header
+    // Close on Mouse Leave Header
     header.addEventListener('mouseleave', () => {
         megamenuContainer.classList.remove('active');
-        activeMenu = null;
     });
 
-    // Sub-service hover logic
+    // Handle Service Item Hover (Preview Logic)
     const serviceItems = document.querySelectorAll('.service-item');
 
     serviceItems.forEach(item => {
         item.addEventListener('mouseenter', () => {
-            const parentList = item.closest('.service-list');
-            const category = parentList.getAttribute('data-category');
+            const parentMegamenu = item.closest('.megamenu');
+            const menuId = parentMegamenu.id.replace('megamenu-', '');
 
-            // Update active state in list
-            parentList.querySelectorAll('.service-item').forEach(i => i.classList.remove('active'));
+            // Highlight active item in this specific megamenu
+            parentMegamenu.querySelectorAll('.service-item').forEach(i => i.classList.remove('active'));
             item.classList.add('active');
 
-            // Update Preview
+            // Update Preview Elements
             const imgPath = item.getAttribute('data-image');
             const title = item.querySelector('h4').textContent;
             const desc = item.getAttribute('data-desc');
 
-            const previewImg = document.getElementById(`preview-img-${category}`);
-            const previewTitle = document.getElementById(`preview-title-${category}`);
-            const previewDesc = document.getElementById(`preview-desc-${category}`);
+            const previewImg = document.getElementById(`preview-img-${menuId}`);
+            const previewTitle = document.getElementById(`preview-title-${menuId}`);
+            const previewDesc = document.getElementById(`preview-desc-${menuId}`);
 
             if (previewImg) {
-                // Add a small fade effect on image change
                 previewImg.style.opacity = '0';
                 setTimeout(() => {
                     previewImg.src = imgPath;
                     previewImg.style.opacity = '1';
-                }, 150);
+                }, 100);
             }
             if (previewTitle) previewTitle.textContent = title;
             if (previewDesc) previewDesc.textContent = desc;

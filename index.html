@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eprenz - Premium Navigation</title>
+    <title>Eprenz - Version 2</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -18,20 +18,14 @@
                 </a>
 
                 <ul class="main-menu">
-                    <li class="menu-item has-megamenu" data-menu="start">
-                        <a href="#" class="menu-link">Start</a>
+                    <li class="menu-item has-megamenu" data-menu="services">
+                        <a href="#" class="menu-link">Our Services</a>
                     </li>
-                    <li class="menu-item has-megamenu" data-menu="grow">
-                        <a href="#" class="menu-link">Grow</a>
-                    </li>
-                    <li class="menu-item has-megamenu" data-menu="profit">
-                        <a href="#" class="menu-link">Profit</a>
+                    <li class="menu-item has-megamenu" data-menu="solutions">
+                        <a href="#" class="menu-link">Solutions</a>
                     </li>
                     <li class="menu-item">
-                        <a href="#" class="menu-link">Partnership</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#" class="menu-link">Resources</a>
+                        <a href="#" class="menu-link">Resource</a>
                     </li>
                 </ul>
 
@@ -56,155 +50,70 @@
 
         <!-- Megamenus Container -->
         <div class="megamenu-container">
-            <!-- Start Megamenu -->
-            <div class="megamenu" id="megamenu-start">
+            <!-- Our Services Megamenu -->
+            <div class="megamenu" id="megamenu-services">
                 <div class="container">
-                    <div class="megamenu-content">
-                        <div class="megamenu-left">
-                            <div class="megamenu-header">
-                                <h2>Start your business</h2>
-                                <p>Launch with confidence and expert support.</p>
-                            </div>
-                            <div class="megamenu-services">
-                                <h3>Services</h3>
-                                <ul class="service-list" data-category="start">
+                    <div class="megamenu-content multi-col">
+                        <div class="megamenu-left-grid">
+                            <!-- Start Column -->
+                            <div class="service-column">
+                                <h3 class="col-title start-col">Start</h3>
+                                <ul class="service-list" data-category="services">
                                     <li class="service-item active"
                                         data-image="assets/community and club growpage_1.webp"
                                         data-desc="Eprenz Club - Join a network of 155,901+ members and scale together.">
                                         <h4>Eprenz Club</h4>
                                         <p>Community dashboard</p>
                                     </li>
-                                    <li class="service-item" data-image="assets/community and club growpage_1.webp"
-                                        data-desc="Millionaire Mentorship - Reach your first million with expert guidance and proven strategies.">
+                                    <li class="service-item" data-image="assets/start deal room.webp"
+                                        data-desc="Millionaire Mentorship - Reach your first million with expert guidance.">
                                         <h4>Millionaire Mentorship</h4>
                                         <p>Expert coaching</p>
                                     </li>
-                                    <li class="service-item" data-image="assets/dealrrom-growpage.webp"
+                                    <li class="service-item" data-image="assets/start deal room.webp"
                                         data-desc="Deal Room - Explore best offers for your business from elite partners.">
                                         <h4>Deal Room</h4>
                                         <p>Exclusive offers</p>
                                     </li>
                                 </ul>
                             </div>
-                        </div>
-                        <div class="megamenu-right">
-                            <div class="preview-card">
-                                <div class="preview-image-wrapper">
-                                    <img src="assets/start-club.webp" alt="Eprenz Club" id="preview-img-start">
-                                </div>
-                                <div class="preview-info">
-                                    <h4 id="preview-title-start">Eprenz Club</h4>
-                                    <p id="preview-desc-start">Join a network of 155,901+ members and scale together.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="megamenu-footer footer-start">
-                    <div class="container footer-grid">
-                        <div class="footer-promo main-promo">
-                            <p>Need help Starting your business?</p>
-                            <a href="#">Check out Start solution <span class="arrow-icon">↗</span></a>
-                        </div>
-                        <div class="footer-promo">
-                            <p>Do you serve this segment?</p>
-                            <a href="#">Explore partnership opportunities.</a>
-                        </div>
-                        <div class="footer-promo">
-                            <p>Still confused?</p>
-                            <a href="#">Talk to a sales rep</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Grow Megamenu -->
-            <div class="megamenu" id="megamenu-grow">
-                <div class="container">
-                    <div class="megamenu-content">
-                        <div class="megamenu-left">
-                            <div class="megamenu-header">
-                                <h2>Grow your business</h2>
-                                <p>Take your company to the next level of success.</p>
-                            </div>
-                            <div class="megamenu-services">
-                                <h3>Services</h3>
-                                <ul class="service-list" data-category="grow">
-                                    <li class="service-item active" data-image="assets/stories.webp"
-                                        data-desc="Eprenz Stories - Real success stories from entrepreneurs who scaled their business.">
+                            <!-- Grow Column -->
+                            <div class="service-column">
+                                <h3 class="col-title grow-col">Grow</h3>
+                                <ul class="service-list" data-category="services">
+                                    <li class="service-item" data-image="assets/stories.webp"
+                                        data-desc="Eprenz Stories - Real success stories from entrepreneurs who scaled.">
                                         <h4>Eprenz Stories</h4>
                                         <p>Success inspiration</p>
                                     </li>
                                     <li class="service-item" data-image="assets/Branding growpage.webp"
-                                        data-desc="Brand Positioning - Stand out in the market with a unique and compelling brand identity.">
+                                        data-desc="Brand Positioning - Stand out in the market with a unique identity.">
                                         <h4>Brand Positioning</h4>
                                         <p>Identity design</p>
                                     </li>
-                                    <li class="service-item" data-image="assets/dealrrom-growpage.webp"
-                                        data-desc="Deal Room - Specialized growth tools and exclusive partner deals.">
+                                    <li class="service-item" data-image="assets/grow deal room.webp"
+                                        data-desc="Deal Room - Specialized growth tools and partner deals.">
                                         <h4>Deal Room</h4>
                                         <p>Scale tools</p>
                                     </li>
                                     <li class="service-item" data-image="assets/events grow page.webp"
-                                        data-desc="Event & Speaking - Connect with industry leaders at our exclusive networking events.">
+                                        data-desc="Event & Speaking - Connect with industry leaders at events.">
                                         <h4>Event & Speaking</h4>
                                         <p>Networking</p>
                                     </li>
                                 </ul>
                             </div>
-                        </div>
-                        <div class="megamenu-right">
-                            <div class="preview-card">
-                                <div class="preview-image-wrapper">
-                                    <img src="assets/stories.webp" alt="Eprenz Stories" id="preview-img-grow">
-                                </div>
-                                <div class="preview-info">
-                                    <h4 id="preview-title-grow">Eprenz Stories</h4>
-                                    <p id="preview-desc-grow">Real success stories from entrepreneurs who scaled their
-                                        business.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="megamenu-footer footer-grow">
-                    <div class="container footer-grid">
-                        <div class="footer-promo main-promo">
-                            <p>Need help growing your business?</p>
-                            <a href="#">Check out Grow solution <span class="arrow-icon">↗</span></a>
-                        </div>
-                        <div class="footer-promo">
-                            <p>Do you serve this segment?</p>
-                            <a href="#">Explore partnership opportunities.</a>
-                        </div>
-                        <div class="footer-promo">
-                            <p>Still confused?</p>
-                            <a href="#">Talk to a sales rep</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Profit Megamenu -->
-            <div class="megamenu" id="megamenu-profit">
-                <div class="container">
-                    <div class="megamenu-content">
-                        <div class="megamenu-left">
-                            <div class="megamenu-header">
-                                <h2>Profit your business</h2>
-                                <p>Optimize your bottom line with intelligent tools.</p>
-                            </div>
-                            <div class="megamenu-services">
-                                <h3>Services</h3>
-                                <ul class="service-list" data-category="profit">
+                            <!-- Profit Column -->
+                            <div class="service-column">
+                                <h3 class="col-title profit-col">Profit</h3>
+                                <ul class="service-list" data-category="services">
                                     <li class="service-item" data-image="assets/finanacial advantage.webp"
-                                        data-desc="Financial CFO - Strategic financial planning to maximize your business's profitability.">
+                                        data-desc="Financial CFO - Strategic financial planning to maximize profitability.">
                                         <h4>Financial CFO</h4>
                                         <p>Strategic planning</p>
                                     </li>
-                                    <li class="service-item active" data-image="assets/dashboard.png"
-                                        data-desc="Financial Dashboard - Real-time insights into your revenue, expenses, and growth metrics.">
+                                    <li class="service-item" data-image="assets/dashboard.png"
+                                        data-desc="Financial Dashboard - Real-time insights into your revenue and metrics.">
                                         <h4>Financial Dashboard</h4>
                                         <p>Real-time analytics</p>
                                     </li>
@@ -214,22 +123,22 @@
                         <div class="megamenu-right">
                             <div class="preview-card">
                                 <div class="preview-image-wrapper">
-                                    <img src="assets/dashboard.png" alt="Financial Dashboard" id="preview-img-profit">
+                                    <img src="assets/community and club growpage_1.webp" alt="Preview"
+                                        id="preview-img-services">
                                 </div>
                                 <div class="preview-info">
-                                    <h4 id="preview-title-profit">Financial Dashboard</h4>
-                                    <p id="preview-desc-profit">Real-time insights into your revenue, expenses, and
-                                        growth metrics.</p>
+                                    <h4 id="preview-title-services">Our Services</h4>
+                                    <p id="preview-desc-services">Hover over any service to see details.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="megamenu-footer footer-profit">
+                <div class="megamenu-footer footer-mixed">
                     <div class="container footer-grid">
                         <div class="footer-promo main-promo">
-                            <p>Need help profiting your business?</p>
-                            <a href="#">Check out Profit solution <span class="arrow-icon">↗</span></a>
+                            <p>Need custom support?</p>
+                            <a href="#">Check out our full suite <span class="arrow-icon">↗</span></a>
                         </div>
                         <div class="footer-promo">
                             <p>Do you serve this segment?</p>
@@ -242,9 +151,76 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Solutions Megamenu -->
+            <div class="megamenu" id="megamenu-solutions">
+                <div class="container">
+                    <div class="megamenu-content">
+                        <div class="megamenu-left">
+                            <div class="megamenu-header">
+                                <h2>Our Solutions</h2>
+                                <p>Comprehensive solutions for every stage of business.</p>
+                            </div>
+                            <div class="megamenu-services">
+                                <ul class="service-list" data-category="solutions">
+                                    <li class="service-item active"
+                                        data-image="assets/community and club growpage_1.webp"
+                                        data-desc="Start Solution - Everything you need to launch your entrepreneurial journey.">
+                                        <h4>Start</h4>
+                                        <p>Launch your dream</p>
+                                    </li>
+                                    <li class="service-item" data-image="assets/stories.webp"
+                                        data-desc="Grow Solution - Strategies and tools for scaling and market expansion.">
+                                        <h4>Grow</h4>
+                                        <p>Scale your impact</p>
+                                    </li>
+                                    <li class="service-item" data-image="assets/dashboard.png"
+                                        data-desc="Profit Solution - Financial intelligence to maximize your bottom line.">
+                                        <h4>Profit</h4>
+                                        <p>Optimize revenue</p>
+                                    </li>
+                                    <li class="service-item" data-image="assets/dealrrom-growpage.webp"
+                                        data-desc="Partnership Solution - Collaborate and create value with other leaders.">
+                                        <h4>Partnership</h4>
+                                        <p>Collaborate & succeed</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="megamenu-right">
+                            <div class="preview-card">
+                                <div class="preview-image-wrapper">
+                                    <img src="assets/community and club growpage_1.webp" alt="Solutions Preview"
+                                        id="preview-img-solutions">
+                                </div>
+                                <div class="preview-info">
+                                    <h4 id="preview-title-solutions">Start</h4>
+                                    <p id="preview-desc-solutions">Everything you need to launch your entrepreneurial
+                                        journey.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="megamenu-footer footer-start">
+                    <div class="container footer-grid">
+                        <div class="footer-promo main-promo">
+                            <p>Ready to unlock your potential?</p>
+                            <a href="#">View all solutions <span class="arrow-icon">↗</span></a>
+                        </div>
+                        <div class="footer-promo">
+                            <p>Enterprise solutions?</p>
+                            <a href="#">Contact partnership team.</a>
+                        </div>
+                        <div class="footer-promo">
+                            <p>Questions?</p>
+                            <a href="#">Knowledge base</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
-
 
     <script src="main.js"></script>
 </body>
