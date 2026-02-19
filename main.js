@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             parentMegamenu.querySelectorAll('.service-item').forEach(i => i.classList.remove('active'));
             item.classList.add('active');
 
+            const variant = item.getAttribute('data-variant');
             // Update Preview Elements
             const imgPath = item.getAttribute('data-image');
             const title = item.querySelector('h4').textContent;
@@ -57,13 +58,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (linkUrl) {
                     previewLink.href = linkUrl;
                     previewLink.style.display = 'inline-block';
+                    // Update button color based on variant
+                    if (variant === 'blue') {
+                        previewLink.style.background = 'var(--blue-accent)';
+                    } else {
+                        previewLink.style.background = 'var(--profit-accent)';
+                    }
                 } else {
                     previewLink.style.display = 'none';
                 }
             }
 
+            // Handle Contact Details (Special for Company menu)
+            const contactDetails = document.getElementById(`contact-details-${menuId}`);
+            if (contactDetails) {
+                if (title.toLowerCase().includes('contact')) {
+                    contactDetails.style.display = 'block';
+                    if (previewLink) previewLink.style.display = 'none'; // Hide CTA if contact info shown
+                } else {
+                    contactDetails.style.display = 'none';
+                }
+            }
+
             // Update Footer Style based on variant
-            const variant = item.getAttribute('data-variant');
             const footer = parentMegamenu.querySelector('.megamenu-footer');
             if (footer && variant) {
                 // Remove all possible footer classes
