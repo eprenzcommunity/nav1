@@ -41,6 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const previewImg = document.getElementById(`preview-img-${menuId}`);
             const previewTitle = document.getElementById(`preview-title-${menuId}`);
             const previewDesc = document.getElementById(`preview-desc-${menuId}`);
+            const previewLink = document.getElementById(`preview-link-${menuId}`);
+            const linkUrl = item.getAttribute('data-link');
 
             if (previewImg) {
                 previewImg.style.opacity = '0';
@@ -51,6 +53,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             if (previewTitle) previewTitle.textContent = title;
             if (previewDesc) previewDesc.textContent = desc;
+            if (previewLink) {
+                if (linkUrl) {
+                    previewLink.href = linkUrl;
+                    previewLink.style.display = 'inline-block';
+                } else {
+                    previewLink.style.display = 'none';
+                }
+            }
 
             // Update Footer Style based on variant
             const variant = item.getAttribute('data-variant');
